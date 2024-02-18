@@ -1,6 +1,4 @@
 "use client";
-// import Detail from "./Detail";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Details({ params }) {
