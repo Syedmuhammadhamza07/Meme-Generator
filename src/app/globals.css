@@ -26,6 +26,31 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.main-card-div {
+  width: 100vw;
+  display: flex;
+  margin: 0; 
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.images{
+  width: 30.3em;
+}
+
+.image-link {
+  display: block;
+  text-decoration: none;  
+  color: inherit;
+}
+.image-name {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
