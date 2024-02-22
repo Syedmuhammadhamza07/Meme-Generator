@@ -31,7 +31,8 @@ export default function Details({ params }) {
   }
 
   return (
-    <div className="w-full bg-gradient-to-tl from-black to-slate-600">
+    <div className="w-full h-screen bg-gradient-to-tl from-black to-slate-600">
+      <div className="border-blue-50 border w-fit m-auto">
       <div className="flex items-center justify-center w-full py-4">
         <h1 className="text-white font-semibold text-2xl">Meme Generator</h1>
       </div>
@@ -77,6 +78,7 @@ export default function Details({ params }) {
           >
             Generate
           </button>
+      </div>
       </div>
       <div>
         {generatedMemeUrl && (
