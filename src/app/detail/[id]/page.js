@@ -32,45 +32,51 @@ export default function Details({ params }) {
 
   return (
     <div className="w-full bg-gradient-to-tl from-black to-slate-600">
-        <div className="flex items-center justify-center w-full py-4">
-            <h1 className="text-white font-semibold text-2xl">Meme Generator</h1>
+      <div className="flex items-center justify-center w-full py-4">
+        <h1 className="text-white font-semibold text-2xl">Meme Generator</h1>
+      </div>
+      <div className="flex items-center justify-center w-full">
+        <img
+          className="w-64 h-64 m-4"
+          src={selectedMemeUrl}
+          alt="Selected Meme"
+        />
+        <div className="mb-4 flex flex-col mx-2">
+          <label
+            htmlFor="text1"
+            className="mr-2 text-lg font-semibold text-white"
+          >
+            Text 1:
+          </label>
+          <input
+            className="h-12 p-2 border bg-transparent text-white border-white rounded"
+            type="text"
+            id="text1"
+            value={text1}
+            onChange={(e) => setText1(e.target.value)}
+          />
         </div>
-      <div className="flex items-center justify-center w-full ">
-      <img
-        className="w-64 h-64 m-4"
-        src={selectedMemeUrl}
-        alt="Selected Meme"
-      />
-      <div className="mb-4">
-        <label htmlFor="text1" className="mr-2 text-lg font-semibold text-white">
-          Text 1:
-        </label>
-        <input
-          className="h-12 p-2 border bg-transparent border-white rounded"
-          type="text"
-          id="text1"
-          value={text1}
-          onChange={(e) => setText1(e.target.value)}
-        />
-      </div>
-      <div className="mb-4">
-        <label htmlFor="text2" className="mr-2 text-lg font-semibold text-white">
-          Text 2:
-        </label>
-        <input
-          className="h-12 p-2 border bg-transparent border-white rounded"
-          type="text"
-          id="text2"
-          value={text2}
-          onChange={(e) => setText2(e.target.value)}
-        />
-      </div>
-      <button
-        class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-blue-700 hover:border-blue-500 rounded"
-        onClick={generateMeme}
-      >
-        Generate
-      </button>
+        <div className="mb-4 flex flex-col">
+          <label
+            htmlFor="text2"
+            className="mr-2 text-lg font-semibold text-white"
+          >
+            Text 2:
+          </label>
+          <input
+            className="h-12 p-2 border bg-transparent text-white border-white rounded"
+            type="text"
+            id="text2"
+            value={text2}
+            onChange={(e) => setText2(e.target.value)}
+          />
+        </div>
+          <button
+            class="bg-red-500 hover:bg-red-400 text-white font-bold p-2 h-12 border-red-700 hover:border-red-500 rounded mx-2 mt-2.5"
+            onClick={generateMeme}
+          >
+            Generate
+          </button>
       </div>
       <div>
         {generatedMemeUrl && (
