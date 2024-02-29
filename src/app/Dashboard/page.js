@@ -6,7 +6,7 @@ export default async function Dashboard() {
   const images = data.data.memes;
 
   return (
-    <div className="w-full m-2">
+    <div className="w-full">
       <div className="main-card-div" > 
         {images.map((item, index) => (
           <div key={index}  className="mb-0 text-center lg:mb-0 lg:text-left">

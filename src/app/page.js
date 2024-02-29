@@ -24,17 +24,22 @@ export default function Home() {
     //   </div>
     // </main>
       <div className="flex min-h-screen flex-col items-center justify-between">
-        <div className="w-screen shadow-sm shadow-slate-600 flex items-center justify-between">
-          <Image src={logo} className="w-16 mr-2"/>
-          <div className="flex items-center w-full">
+        <div className="w-full shadow-sm shadow-slate-600 flex items-center justify-between">
+      <Link href={"/"} passHref>
+        <Image src={logo} className="w-32 mr-2" />
+      </Link>
+        <div className="flex items-center w-full sm:w-auto">
           <p className="text-base text-red-600 font-medium mx-2">HOME</p>
-          <p className="text-base text-red-600 font-medium mx-2">Meme Generator</p>
-          </div>
-          <div className="flex items-center justify-end w-full">
-          <button className="text-base text-red-600 bg-transparent font-medium mx-2">Login</button>
-          <button className="text-base text-white bg-red-600 p-1 rounded-md font-medium mx-2">Sign Up</button>
-          </div>
         </div>
+        <div className="flex items-center justify-end w-full">
+          <button className="text-base text-red-600 bg-transparent font-medium mx-2">
+            Login
+          </button>
+          <button className="text-base text-white bg-red-600 p-1 rounded-md font-medium mx-2">
+            Sign Up
+          </button>
+        </div>
+      </div>
 
         <div className="w-screen mt-2">
           <div className="flex flex-col items-center w-full">
